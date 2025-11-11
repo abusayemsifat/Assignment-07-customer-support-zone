@@ -5,10 +5,9 @@ const CustomerTickets = ({ ticketsPromise }) => {
 
     const ticketsData = use(ticketsPromise)
     const tickets = ticketsData.tickets
-    console.log(tickets.title)
     return (
-        <div className='max-w-11/12 mx-auto'>
-            <div className='grid grid-cols-2 gap-x-6 gap-y-4 max-w-2/3'>
+        <div className=''>
+            <div className='grid grid-cols-2 gap-x-6 gap-y-4 w-full'>
                 {
                     tickets.map(ticket => <TicketsCard ticket={ticket}></TicketsCard>)
                 }

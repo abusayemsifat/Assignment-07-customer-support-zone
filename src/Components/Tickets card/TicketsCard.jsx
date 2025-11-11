@@ -9,7 +9,7 @@ const TicketsCard = ({ticket}) => {
     
     return (
         <div>
-            <div className='w-[513px] h-[148px] bg-white p-4 rounded-sm shadow-md flex flex-col justify-between'>
+            <div className='w-[650px] h-[148px] bg-white p-4 rounded-sm shadow-md flex flex-col justify-between cursor-pointer active:scale-95 duration-75'>
                 <div className='flex justify-between items-center'>
                     <h2 className='text-[18px] font-medium text-[#001931]'>{ticket.title}</h2>
                     <div className={`min-w-[88px] h-[32px]  rounded-full px-3 py-1 flex items-center justify-between gap-1.5 ${ticket.status === "In Progress" ? 'bg-[#F8F3B9]' : 'bg-[#B9F8CF]'}`}>

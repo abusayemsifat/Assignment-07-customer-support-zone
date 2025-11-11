@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className='bg-black mb-0 mt-[80px]'>
             <div className='max-w-11/12 mx-auto'>
-                <footer className="p-10 mx-auto flex justify-between items-start">
+                <footer className="py-10 flex justify-between items-start">
                     <nav className='flex flex-col gap-3 max-w-[350px] m-0 p-0'>
                         <h6 className="text-white">CS — Ticket System</h6>
                         <p className='text-[#A1A1AA]'>
@@ -38,10 +38,8 @@ const Footer = () => {
                     </nav>
                 </footer>
                 <hr />
-                <footer className="footer sm:footer-horizontal footer-center text-[#FAFAFA] p-4 text-base border-t-0.5 border-[#E5E7EB] max-w-11/12">
-                    <aside>
-                        <p>© {new Date().getFullYear()} CS — Ticket System. All rights reserved.</p>
-                    </aside>
+                <footer className="footer sm:footer-horizontal footer-center text-[#FAFAFA] py-4 text-base w-full flex">
+                    <p className='mx-auto'>© {new Date().getFullYear()} CS — Ticket System. All rights reserved.</p>
                 </footer>
             </div>
         </div>
