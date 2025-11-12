@@ -1,16 +1,14 @@
-# React + Vite
+## What is JSX, and why is it used?
+JSX(javascript xml) is a javascript syntax extension which allows to write html within the js file. It is used to make react components easy to understand and more readable.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## What is the difference between State and Props?
+State is managed inside the component, whereas props are passed into the component from its parent. State is mutable, whereas props are immutable.
 
-Currently, two official plugins are available:
+## What is the useState hook, and how does it work?
+The useState hook is a function that lets you add state to functional components in React. It works by returning an array containing two values: the current state value and a setter function to update it. When the setter function is called with a new value, React re-renders the component, and the new state value is available on the next render.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How can you share state between components in React?
+We can share state between components in react by lifting the states up to the nearest common ancestor
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## How is event handling done in React?
+Event handling in react is done by passing a function as an event handler.
