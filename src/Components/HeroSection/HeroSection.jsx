@@ -16,7 +16,7 @@ const HeroSection = ({taskStatus, resolvedTasks}) => {
                 </div>
             </div>
 
-            <div className='w-[850px] h-[300px] flex bg-gradient-to-r from-[#54CF68] to-[#00827A] text-white rounded-xl text-center relative max-sm:w-[350px] max-sm:h-[200px]'>
+            <div className='w-[850px] h-[300px] flex bg-gradient-to-r from-[#54CF68] to-[#00827A] text-white rounded-xl text-center relative max-sm:w-[350px] max-sm:h-[200px] max-sm:mt-4'>
                 <div className='mx-auto my-auto'>
                     <p className='text-2xl'>Resolved</p>
                     <h1 className='text-6xl font-semibold mt-4'>{resolvedTasks.length}</h1>
