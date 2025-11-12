@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className='bg-black mb-0 mt-[80px]'>
             <div className='max-w-11/12 mx-auto'>
-                <footer className="py-10 flex justify-between items-start">
+                <footer className="py-10 flex justify-between items-start max-sm:flex-col max-sm:gap-9 max-sm:text-center max-sm:items-center">
                     <nav className='flex flex-col gap-3 max-w-[350px] m-0 p-0'>
                         <h6 className="text-white">CS — Ticket System</h6>
                         <p className='text-[#A1A1AA]'>

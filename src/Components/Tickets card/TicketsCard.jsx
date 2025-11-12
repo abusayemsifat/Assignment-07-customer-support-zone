@@ -1,20 +1,26 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
-const TicketsCard = ({ticket}) => {
+const TicketsCard = ({ticket, taskStatus, settaskStatus}) => {
 
     const formatDate = (string) => {
         const date = new Date(string);
         return date.toLocaleDateString('en-US');
     }
     
+    const handleTask = (ticketData) =>{
+        settaskStatus([...taskStatus, ticketData])
+        toast("In Progress!")
+    }
+    
     return (
         <div>
-            <div className='w-[650px] h-[148px] bg-white p-4 rounded-sm shadow-md flex flex-col justify-between cursor-pointer active:scale-95 duration-75'>
+            <div className='w-[650px] h-[148px] bg-white p-4 rounded-sm shadow-md flex flex-col justify-between cursor-pointer active:scale-95 duration-75 max-sm:w-[353px] max-sm:h-[200px] max-sm:p-2.5 max-sm:rounded-xl' onClick={() => { handleTask(ticket) }}>
                 <div className='flex justify-between items-center'>
-                    <h2 className='text-[18px] font-medium text-[#001931]'>{ticket.title}</h2>
-                    <div className={`min-w-[88px] h-[32px]  rounded-full px-3 py-1 flex items-center justify-between gap-1.5 ${ticket.status === "In Progress" ? 'bg-[#F8F3B9]' : 'bg-[#B9F8CF]'}`}>
-                        <div className={`w-[16px] h-[16px] rounded-full ${ticket.status === "In Progress" ? 'bg-[#FEBB0C]' : 'bg-[#02A53B]'}`}></div>
-                        <p className={`text-base  font-medium ${ticket.status === "In Progress" ? 'text-[#9C7700]' : 'text-[#0B5E06]'}`}>{ticket.status}</p>
+                    <h2 className='text-[18px] max-sm:text-base font-medium text-[#001931]'>{ticket.title}</h2>
+                    <div className={`min-w-[88px] h-8  rounded-full px-3 py-1 flex items-center justify-between gap-1.5 ${ticket.status === "In Progress" ? 'bg-[#F8F3B9]' : 'bg-[#B9F8CF]'}`}>
+                        <div className={`w-4 h-4 rounded-full ${ticket.status === "In Progress" ? 'bg-[#FEBB0C]' : 'bg-[#02A53B]'}`}></div>
+                        <p className={`text-base font-medium max-sm:text-[14px] ${ticket.status === "In Progress" ? 'text-[#9C7700]' : 'text-[#0B5E06]'}`}>{ticket.status}</p>
                     </div>
                 </div>
                 <p className='text-[#627382]'>{ticket.description}</p>
